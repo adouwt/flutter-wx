@@ -20,27 +20,6 @@ class MyApp extends StatelessWidget {
             children: <Widget>[
               new Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      print('111');
-                    },
-                    child: Row (
-                      children: [
-                        new Icon(
-                          Icons.add_a_photo,
-                          color: Colors.white
-                        ),
-                        Padding(
-                          padding: EdgeInsets.only(right: 20),
-                        )
-                      ]
-                    ),
-                  ),
-                ],
-              ),
-              new Row(
-                mainAxisAlignment: MainAxisAlignment.end,
                 // crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   new Text(
@@ -74,88 +53,219 @@ class MyApp extends StatelessWidget {
             ],
           ),
         ),
-        
+        Positioned(
+              top:10,
+              right: 0,
+              child: GestureDetector(
+                onTap: () {
+                  print('111');
+                },
+                child: Row (
+                  children: [
+                    new Icon(
+                      Icons.add_a_photo,
+                      color: Colors.white
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 20),
+                    )
+                  ]
+                ),
+              ),
+        ),
       ],
     );
 
-
-    Widget titleSection = new Container(
-      padding: const EdgeInsets.all(32.0),
-      child: new Row(
-        children: [
-          new Expanded(
-            child: new Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                new Container(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: new Text(
-                    'Oeschinen Lake Campground',
-                    style: new TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+    Widget userThings = new Container(
+      margin: const EdgeInsets.only(top: 30.0, left: 15.0),
+      child:  new Container(
+        child: new Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            new Expanded(
+              flex: 1,
+              child:
+                new Image.asset(
+                  'images/avatar.jpg',
+                  width: 60.0,
+                  height: 60.0,
                 ),
-                new Text(
-                  'Kandersteg, Switzerland',
-                  style: new TextStyle(
-                    color: Colors.grey[500],
-                  ),
-                ),
-              ],
             ),
-          ),
-          new Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          new Text('41'),
+            new Container(
+              margin: const EdgeInsets.all(5),
+            ),
+            new Expanded(
+              flex: 5,
+              child: 
+                new Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children:[
+                    new Text(
+                    '迩伶贰',
+                      style: new TextStyle(
+                        color: Colors.black,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                    new Text(
+                    '明天就要过六一了哇，好开心啊，发几张通信阿德杀马特风格的照片在朋友圈过过节啊，反正就是开心，不接受反驳！！！！',
+                      style: new TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold
+                      ),
+                    ),
+                    new Center(
+                      // padding: EdgeInsets.all(5),
+                      child: new Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          new Expanded(
+                            child: new Container(
+                              decoration: new BoxDecoration(
+                                borderRadius:
+                                    const BorderRadius.all(const Radius.circular(8.0)),
+                              ),
+                              margin: const EdgeInsets.all(4.0),
+                              child: new Image.asset('images/avatar.jpg'),
+                            ),
+                          ),
+                          new Expanded(
+                            child: new Container(
+                              decoration: new BoxDecoration(
+                                borderRadius:
+                                    const BorderRadius.all(const Radius.circular(8.0)),
+                              ),
+                              margin: const EdgeInsets.all(4.0),
+                              child: new Image.asset('images/avatar.jpg'),
+                            ),
+                          ),
+                          new Expanded(
+                            child: new Container(
+                              decoration: new BoxDecoration(
+                                borderRadius:
+                                    const BorderRadius.all(const Radius.circular(8.0)),
+                              ),
+                              margin: const EdgeInsets.all(4.0),
+                              child: new Image.asset('images/avatar.jpg'),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    new Container(
+                      padding: EdgeInsets.fromLTRB(5, 5, 20, 5),
+                      child: new Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text('6小时前'),
+                          Container(
+                            child: Row(
+                              children: <Widget>[
+                                new Icon(
+                                  Icons.add_a_photo,
+                                  color: Colors.black12
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    new Container(
+                      padding: EdgeInsets.all(20),
+                      child: new DecoratedBox(
+                        decoration: BoxDecoration(
+                          color:Colors.black12,
+                          borderRadius: BorderRadius.circular(3.0), //3像素圆角
+                        ),
+                        child: new Column(
+                          children: <Widget>[
+                            new Container(
+                              padding: EdgeInsets.all(5),
+                              child: new Row(
+                                children: <Widget>[
+                                  new Icon(
+                                    Icons.favorite_border,
+                                    color: Colors.grey,
+                                    size: 16,
+                                  ),
+                                  Text('老板、'),
+                                  Text('Ceo、'),
+                                  Text('DBA'),
+                                ],
+                              ),
+                            ),
+                            new Container(
+                              padding: EdgeInsets.all(10),
+                              child: new Column(
+                                children: <Widget>[
+                                  new Row(
+                                  children: <Widget>[
+                                    new Text('老板:', style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 14.0,
+                                        height: 1.3,  
+                                    ),),
+                                    new Text('公司明天集体过六一，带孩子',
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 14.0,
+                                        height: 1.3,  
+                                      ),
+                                    ),
+                                  ],
+                                  ),
+                                  new Row(
+                                    children: <Widget>[
+                                      new Text('老板:', style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 14.0,
+                                          height: 1.3,  
+                                      ),),
+                                      new Text('公司明天集体过六一，带孩子',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 14.0,
+                                          height: 1.3,  
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  new Row(
+                                    children: <Widget>[
+                                      new Text('老板:', style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 14.0,
+                                          height: 1.3,  
+                                      ),),
+                                      new Text('公司明天集体过六一，带孩子',
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 14.0,
+                                          height: 1.3,  
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ),
+                  ]
+                )
+            ),
         ],
+        ) 
       ),
     );
    
-    Column buildButtonColumn(IconData icon, String label) {
-        Color color = Theme.of(context).primaryColor;
-        return new Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            new Icon(icon, color: color),
-            new Container(
-              margin: const EdgeInsets.only(top: 8.0),
-              child: new Text(
-                label,
-                style: new TextStyle(
-                  fontSize: 12.0,
-                  fontWeight: FontWeight.w400,
-                  color: color,
-                ),
-              ),
-            ),
-          ],
-        );
-    }
-
-    Widget buttonSection = new Container(
-      child: new Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          buildButtonColumn(Icons.call, 'CALL'),
-          buildButtonColumn(Icons.near_me, 'ROUTE'),
-          buildButtonColumn(Icons.share, 'SHARE'),
-        ],
-      ),
-    );
-
-    Widget textSection = new Container(
-      padding: const EdgeInsets.all(32.0),
-      child: new Text(
-        '''
-Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situated 1,578 meters above sea level, it is one of the larger Alpine Lakes. A gondola ride from Kandersteg, followed by a half-hour walk through pastures and pine forest, leads you to the lake, which warms to 20 degrees Celsius in the summer. Activities enjoyed here include rowing, and riding the summer toboggan run.
-        ''',
-        softWrap: true,
-      ),
-    );
 
     return new MaterialApp(
       title: 'hello Flutter', // 页面上没有用？
@@ -168,16 +278,14 @@ Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situate
         // ),
         body: new ListView(
           children: [
-            // new Image.asset(
-            //   'images/banner-phone.png',
-            //   width: 600.0,
-            //   height: 240.0,
-            //   fit: BoxFit.cover,
-            // ),
             bannerImg,
-            titleSection,
-            buttonSection,
-            textSection,
+            userThings,
+            userThings,
+            userThings,
+            userThings,
+            userThings,
+            userThings,
+            userThings,
           ],
         ),
       ),
