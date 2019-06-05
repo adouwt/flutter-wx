@@ -24,6 +24,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   english_words: ^3.1.0
   image_picker: ^0.5.0+3
+  webview_flutter: 0.3.9+1
 
 dev_dependencies:
   flutter_test:
