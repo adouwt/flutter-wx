@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
         title: Text("微信"),
       ),
       body:
-      ListView.builder(
+        ListView.builder(
             padding: const EdgeInsets.all(8.0),
             itemCount: entries.length,
             itemBuilder: (BuildContext context, int index) {

@@ -21,28 +21,36 @@ class DiscoverScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color:Colors.white,
                   ),
-                  child:  Container(
-                    padding: EdgeInsets.all(10),
-                    child: Row(
-                      children: <Widget>[
-                        Expanded(
-                          flex: 1,
-                          child: Icon(Icons.access_alarms,color: Colors.orangeAccent),
+                  child:  GestureDetector(
+                    onTap: () {
+                      print('asdfasdfasdfasdfasdf');
+                      Navigator.pushNamed(context, 'friend_circle');
+                    },
+                    child: 
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                              flex: 1,
+                              child: Icon(Icons.access_alarms,color: Colors.orangeAccent),
+                            ),
+                            Expanded(
+                              flex: 5,
+                              child: Text('朋友圈', style: TextStyle(
+                                fontSize: 16,
+                                // fontWeight: FontWeight.bold
+                              )),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Icon(Icons.chevron_right ,color: Colors.black26),
+                            ),
+                          ],
                         ),
-                        Expanded(
-                          flex: 5,
-                          child: Text('朋友圈', style: TextStyle(
-                            fontSize: 16,
-                            // fontWeight: FontWeight.bold
-                          )),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Icon(Icons.chevron_right ,color: Colors.black26),
-                        ),
-                      ],
-                    ),
-                  )
+                      ),
+                  ),
+                  
                 ),
                 Padding(
                   padding: EdgeInsets.all(5),
@@ -108,28 +116,35 @@ class DiscoverScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color:Colors.white,
                   ),
-                  child:  Container(
-                    padding: EdgeInsets.all(10),
-                    child: Row(
-                      children: <Widget>[
-                        Expanded(
-                          flex: 1,
-                          child: Icon(Icons.access_alarms,color: Colors.orangeAccent),
+                  child:  GestureDetector(
+                    onTap: () {
+                      print('asdfasdfasdfasdfasdf');
+                      Navigator.pushNamed(context, 'webview');
+                    },
+                    child: 
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        child: Row(
+                          children: <Widget>[
+                            Expanded(
+                              flex: 1,
+                              child: Icon(Icons.access_alarms,color: Colors.orangeAccent),
+                            ),
+                            Expanded(
+                              flex: 5,
+                              child: Text('看一看', style: TextStyle(
+                                fontSize: 16,
+                                // fontWeight: FontWeight.bold
+                              )),
+                            ),
+                            Expanded(
+                              flex: 1,
+                              child: Icon(Icons.chevron_right ,color: Colors.black26),
+                            ),
+                          ],
                         ),
-                        Expanded(
-                          flex: 5,
-                          child: Text('看一看', style: TextStyle(
-                            fontSize: 16,
-                            // fontWeight: FontWeight.bold
-                          )),
-                        ),
-                        Expanded(
-                          flex: 1,
-                          child: Icon(Icons.chevron_right ,color: Colors.black26),
-                        ),
-                      ],
-                    ),
-                  )
+                      ),
+                  ),
                 ),
                 DecoratedBox(
                   decoration: BoxDecoration(

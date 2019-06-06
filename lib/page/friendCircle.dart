@@ -272,9 +272,9 @@ class FriendCircleScreen extends StatelessWidget {
         primaryColor: Colors.red,
       ),
       home: new Scaffold(
-        appBar: AppBar(
-          title: Text("New friend"),
-        ),
+        // appBar: AppBar(
+        //   title: Text("New friend"),
+        // ),
         body: new ListView(
           children: [
             bannerImg,

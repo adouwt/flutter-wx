@@ -5,6 +5,7 @@ import 'page/userList.dart';
 import 'page/discover.dart';
 import 'page/my.dart';
 import 'page/camera.dart';
+import 'page/webview.dart';
 
 
 // 这里导入组件或者模块的功能很厉害，只要导入进来，在当前文件环境就能知道该导入的文件的 Class 名字，并且直接使用
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
         "my":(context) => MyScreen(),
         "friend_circle": (context) => FriendCircleScreen(),
         "camera": (context) => MyCamera(),
+        "webview": (context) => WebviewScreen(),
       } ,
       home: new MyHomePage(title: 'Flutter Demo Home Page'),
     );
