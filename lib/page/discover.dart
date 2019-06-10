@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(new DiscoverScreen());
+// void main() => runApp(new DiscoverScreen());
 
 class DiscoverScreen extends StatelessWidget {
   @override

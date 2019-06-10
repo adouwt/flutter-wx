@@ -45,4 +45,4 @@ class _MyHomePageState extends State<MyCamera> {
   }
 }
 
-void main() => runApp(new MyCamera());
+// void main() => runApp(new MyCamera());
