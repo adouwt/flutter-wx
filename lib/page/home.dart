@@ -27,21 +27,118 @@ class AnimateModel extends AnimatedWidget {
           top: 100,
           right: animation.value,
           width: 150,
+          // height: 150,
           child: 
             DecoratedBox(
               decoration: BoxDecoration(
-                color:Colors.black12,
+                color:Colors.black45,
                 borderRadius: BorderRadius.circular(3.0), //3像素圆角
               ),
               child:  
                 Column(
                   children: <Widget>[
                     Container(
-                      child: Text('sssss'),
+                      height: 40,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 1,
+                            child: Icon(
+                              Icons.access_alarms,
+                              color: Colors.white
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text('发起群聊', style: TextStyle(color: Colors.white)),
+                          ),
+                        ],
+                      ),
                     ),
-                    Text('sdddd'),
-                    Text('sdddd'),
-                    Text('sdddd'),
+                    Container(
+                      height: 40,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 1,
+                            child: Icon(
+                              Icons.access_alarms,
+                              color: Colors.white
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text('添加朋友', style: TextStyle(color: Colors.white)),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 5),
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 40,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 1,
+                            child: Icon(
+                              Icons.access_alarms,
+                              color: Colors.white
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text('扫一扫', style: TextStyle(color: Colors.white)),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 5),
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 40,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 1,
+                            child: Icon(
+                              Icons.access_alarms,
+                              color: Colors.white
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text('收付款', style: TextStyle(color: Colors.white)),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 5),
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      height: 40,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            flex: 1,
+                            child: Icon(
+                              Icons.access_alarms,
+                              color: Colors.white
+                            ),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text('帮助与反馈', style: TextStyle(color: Colors.white)),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 5),
+                          )
+                        ],
+                      ),
+                    ),
                   ],
                 ),
             )
