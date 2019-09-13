@@ -8,23 +8,23 @@ class WebviewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Builder(
-          builder: (BuildContext context) {
-            return IconButton(
-              icon: const Icon(Icons.chevron_left),
-              color: Colors.black,
-              onPressed: () { 
-                Navigator.pop(context);
-               },
-              tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
-            );
-          },
-        ),
-        title: Text("webview", style: TextStyle(color: Colors.black),),
-        backgroundColor: Colors.white,
+        // leading: Builder(
+        //   builder: (BuildContext context) {
+        //     return IconButton(
+        //       icon: const Icon(Icons.chevron_left),
+        //       color: Colors.white,
+        //       onPressed: () { 
+        //         Navigator.pop(context);
+        //        },
+        //       tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+        //     );
+        //   },
+        // ),
+        // title: Text("租车宝", style: TextStyle(color: Colors.black),),
+        // backgroundColor: Colors.white,
       ),
       body: const WebView(
-        initialUrl: 'https://www.baidu.com/',
+        initialUrl: 'https://m.ctrip.com/webapp/cars/isdvbk/#/',
         javascriptMode: JavascriptMode.unrestricted,
       ),
     );

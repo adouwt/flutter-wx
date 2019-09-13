@@ -136,7 +136,7 @@ class DiscoverScreen extends StatelessWidget {
                       ),
                       Expanded(
                         flex: 5,
-                        child: Text('看一看',
+                        child: Text('租车宝',
                             style: TextStyle(
                               fontSize: 16,
                               // fontWeight: FontWeight.bold
